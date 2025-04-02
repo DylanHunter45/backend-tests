@@ -1,2 +1,4 @@
 /project-2/node-modules
 /project-1/node_modules
+project-2/.env
+.gitignore
