@@ -1,0 +1,20 @@
+### GET /
+GET http://localhost:8383/
+
+### POST REGISTRATION POST /auth.register
+POST http://localhost:8383/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser@user.com",
+  "password": "testpassword"
+}
+
+### POST LOGIN post /auth/login
+POST http://localhost:8383/auth/login
+Content-Type: application/json
+
+{
+  "username": "testuser@user.com",
+  "password": "testpassword"
+}

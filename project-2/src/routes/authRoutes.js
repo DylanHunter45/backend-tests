@@ -1,11 +1,24 @@
-import express from "express";
-import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
-import db from "../db.js";
+import express from 'express'
+import bcrypt from 'bcryptjs'
+import jwt from 'jsonwebtoken'
+import db from '../db.js'
 
-const router = express.Router();
+const router = express.Router()
 
-router.post("/register", async (req, res) => {});
-router.post("/login", async (req, res) => {});
+// registering new user
+router.post('/register', async (req, res) => {
+    const { username, password } = req.body
 
-export default router;
+    const hashedPassword = bcrypt.hash(password, 10)
+    console.log(username, hashedPassword)
+    res.sendStatus(201)
+})
+
+// logging in user
+router.post('/login', async (req, res) => {
+    const { username, password } = req.body
+    console.log(username, password)
+    res.sendStatus(200)
+})
+
+export default router

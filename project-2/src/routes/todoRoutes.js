@@ -1,11 +1,11 @@
-import express from "express";
-import db from "../db.js";
+import express from 'express'
+import db from '../db.js'
 
-const router = express.Router();
+const router = express.Router()
 
-router.get("/", (req, res) => {});
-router.post("/", (req, res) => {});
-router.put("/:id", (req, res) => {});
-router.delete("/:id", (req, res) => {});
+router.get('/', (req, res) => {})
+router.post('/', (req, res) => {})
+router.put('/:id', (req, res) => {})
+router.delete('/:id', (req, res) => {})
 
-export default router;
+export default router
